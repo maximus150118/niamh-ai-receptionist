@@ -167,3 +167,16 @@ html.mail-open{overflow:hidden}
 @media(min-width:520px){.mail-actions{grid-template-columns:1fr 1fr}}
 @media(max-width:519px){.mail-modal[open]{align-items:flex-end;padding:12px}.mail-card{padding:28px 20px 20px;border-radius:22px}.mail-copy{flex-direction:column;align-items:stretch;text-align:center;padding:14px;gap:10px}.mail-addr{font-size:clamp(.95rem,4.6vw,1.1rem)}.mail-copy-btn{width:100%}}
 @media(prefers-reduced-motion:reduce){.mail-card{animation:none}}
+
+/* free checklist (lead magnet) */
+.lm-sec{padding:48px 0 0}
+.lm{display:flex;flex-wrap:wrap;align-items:center;gap:24px 36px;background:#0F1F45;color:#fff;border-radius:var(--radius);border-left:6px solid #C9A24A;padding:28px;box-shadow:var(--shadow)}
+.lm-thumb{flex:0 0 auto;width:150px;height:auto;border-radius:8px;box-shadow:0 12px 28px -10px rgba(0,0,0,.55);transform:rotate(-2deg)}
+.lm-body{flex:1 1 300px}
+.lm-tag{margin:0 0 6px;color:#C9A24A;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.lm h2{color:#fff;margin:0 0 10px;font-size:clamp(1.35rem,2.6vw,1.75rem);line-height:1.2}
+.lm-body>p:not(.lm-tag):not(.lm-note){color:#D6DBEA;margin:0 0 18px;max-width:60ch;font-size:16px}
+.lm-btn{background:#C9A24A;color:#0F1F45;box-shadow:0 8px 20px -8px rgba(201,162,74,.6)}
+.lm-btn:hover{background:#DDB862}
+.lm-note{margin:10px 0 0;color:#A9B2CC;font-size:13px}
+@media(max-width:520px){.lm{padding:22px}.lm-thumb{width:120px;margin-inline:auto}.lm-btn{width:100%}}
