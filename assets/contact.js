@@ -88,6 +88,7 @@
     lastFocus = document.activeElement;
     if (canModal) dlg.showModal(); else { dlg.setAttribute('open', ''); dlg.classList.add('mail-fallback'); }
     document.documentElement.classList.add('mail-open');
+    showChat(false);
     copyBtn.focus();
   }
 
@@ -95,7 +96,16 @@
     if (!dlg || !dlg.hasAttribute('open')) return;
     if (canModal) dlg.close(); else dlg.removeAttribute('open');
     document.documentElement.classList.remove('mail-open');
+    showChat(true);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  // Chat widget (lead-assistant widget.js): hidden while this popup is open.
+  // Its host element has an inline "display:block !important", which a stylesheet
+  // cannot override, so the inline value is switched here. No widget on the page: nothing happens.
+  function showChat(show) {
+    var chat = document.querySelector('lead-assistant-widget');
+    if (chat) chat.style.setProperty('display', show ? 'block' : 'none', 'important');
   }
 
   function resetCopy() {

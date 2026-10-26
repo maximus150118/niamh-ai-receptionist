@@ -180,3 +180,6 @@ html.mail-open{overflow:hidden}
 .lm-btn:hover{background:#DDB862}
 .lm-note{margin:10px 0 0;color:#A9B2CC;font-size:13px}
 @media(max-width:520px){.lm{padding:22px}.lm-thumb{width:120px;margin-inline:auto}.lm-btn{width:100%}}
+
+/* chat widget (lead-assistant): keep footer text clear of the chat button */
+footer{padding-bottom:96px}
